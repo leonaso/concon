@@ -1,4 +1,12 @@
-<h1>Welcome to El Concon. Home of gourmet cooking</h1>
-
-<%= link_to 'About', about_path %>
-<%= link_to 'Help', help_path %>
+<div class="center jumbotron">
+  <h1>Welcome to El Concon. Home of gourmet cooking</h1>
+  <h2>This is the home page for a great cooking experience.</h2>
+  
+  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+  
+</div>
+<div>  <%= link_to image_tag("concon.png", alt: "The best Concon"), '#' %></div>
+<div>
+  <%= link_to 'About', about_path %>
+  <%= link_to 'Help', help_path %>
+</div>

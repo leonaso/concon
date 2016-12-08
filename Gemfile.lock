@@ -277,7 +277,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   bcrypt-ruby
-  bootstrap-sass
+  bootstrap-sass (>= 3.3.6)
   bootstrap-will_paginate
   byebug (= 9.0.0)
   capybara
