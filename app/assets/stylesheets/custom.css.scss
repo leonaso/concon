@@ -1,3 +1,4 @@
+$navbar-default-bg: #08088A;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -21,9 +22,16 @@ textarea {
 
 .center {
   text-align: center;
-  h1 {
+  h1, h2 {
     margin-bottom: 10px;
+    color: #fff;
   }
+}
+
+.jumbotron {
+  background-image: asset-url('Pinchos.jpg');
+  background-size: cover;
+  
 }
 
 /* typography */
@@ -45,7 +53,8 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color: crimson;
+  font-weight: bold;
 }
 
 p {
@@ -56,7 +65,7 @@ p {
 
 /* header */
 
-#logo {
+#logo, #logo2 {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -66,8 +75,8 @@ p {
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: white;
-    text-decoration: none;
+    color: #a1abad;
+    /* text-decoration: none; */
   }
 }
 
