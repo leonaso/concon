@@ -1,0 +1,22 @@
+<% if @recipe.errors.any? %>
+  <div class='row'>
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class='panel panel-danger'>
+        <div class='panel-heading'>
+          <div class='panel-title'>
+            <%= pluralize(@recipe.errors.count, 'error') %>
+            prevented Concon from saving the recipe
+          </div>
+          <div class='panel-body'>
+            <ul>
+              <% @recipe.errors.full_messages.each do | msg | %>
+                <li>  
+                  <%= msg %> 
+                </li>
+              <% end %>  
+            </ul>
+        </div>
+      </div>  
+    </div>
+  </div>    
+<% end %>  

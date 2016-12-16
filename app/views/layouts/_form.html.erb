@@ -1,18 +1,7 @@
-<% if @recipe.errors.any? %>
-<h2>The following errors prevented Concon from creating the recipe</h2>
-  <ul>
-    <% @recipe.errors.full_messages.each do | msg | %>
-      <li>  
-        <%= msg %> 
-      </li>
-    <% end %>  
-  </ul>
-<% end %>  
-
+<%= render 'shared/errors', obj: @recipe %>
 <div class='row'>
   <div class='col-sm-12'>
     <%= form_for(@recipe, :html => {class: "form-horizontal", role: "form"}) do | f | %>
-
       <div class='form-group'>
         <div class='control-label col-sm-2'>
           <%= f.label :title %>
