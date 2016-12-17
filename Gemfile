@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 #gem 'rails', '4.1.4'
 ruby '2.3.1'
 gem 'rails', '>= 5.0.0.1'
+gem 'bcrypt', '>= 3.1.7'
 gem 'bootstrap-sass', '>= 3.3.6'
 gem 'sprockets'
 gem 'bcrypt-ruby'
@@ -50,7 +51,6 @@ group :development, :test do
 # Use debugger
 #  gem 'debugger'
 # Use ActiveModel has_secure_password  
-  gem 'bcrypt'
 end
 
 group :test do

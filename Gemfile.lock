@@ -275,7 +275,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt
+  bcrypt (>= 3.1.7)
   bcrypt-ruby
   bootstrap-sass (>= 3.3.6)
   bootstrap-will_paginate
