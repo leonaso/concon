@@ -1,5 +1,11 @@
 <h1>Listing all Recipes</h1>
-
+<div align='center'>
+  <%= will_paginate %>
+</div>
 <%= render 'recipe', obj: @recipes %>
 
 <p><%= link_to 'Home', root_path %></p>
+
+<div align='center'>
+  <%= will_paginate %>
+</div>
