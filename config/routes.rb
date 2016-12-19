@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   get 'help', to:  'welcome#help'
   
   resources :recipes
-  resources :users
+
+  get 'signup', to: 'users#new'
+  
+  resources :users, except: [:new]
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
