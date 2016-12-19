@@ -278,7 +278,7 @@ DEPENDENCIES
   bcrypt (>= 3.1.7)
   bcrypt-ruby
   bootstrap-sass (>= 3.3.6)
-  bootstrap-will_paginate
+  bootstrap-will_paginate (= 0.0.10)
   byebug (= 9.0.0)
   capybara
   childprocess
@@ -308,7 +308,7 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 3.0.0)
   web-console
-  will_paginate
+  will_paginate (= 3.1.5)
 
 RUBY VERSION
    ruby 2.3.1p112

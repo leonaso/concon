@@ -9,9 +9,9 @@ gem 'bcrypt', '>= 3.1.7'
 gem 'bootstrap-sass', '>= 3.3.6'
 gem 'sprockets'
 gem 'bcrypt-ruby'
+gem 'will_paginate', '3.1.5'
+gem 'bootstrap-will_paginate', '0.0.10'
 gem 'faker'
-gem 'will_paginate'
-gem 'bootstrap-will_paginate'
 
 gem 'puma', '>= 3.4.0'
 # Use SCSS for stylesheets
