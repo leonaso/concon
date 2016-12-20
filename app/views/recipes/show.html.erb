@@ -22,10 +22,12 @@
   <hr>
   <%= simple_format(@recipe.description) %>
   <div class="article-actions">
-    <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class: "btn btn-xs btn-primary" %>
-    <%= link_to "Delete this recipe", recipe_path(@recipe), method: :delete, 
+    <% if logged_in? && current_user == @recipe.user %>
+      <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class: "btn btn-xs btn-primary" %>
+      <%= link_to "Delete this recipe", recipe_path(@recipe), method: :delete, 
                                       data: {confirm: "Are you sure to delete this recipe?"}, 
-                                      class: "btn btn-xs btn-danger" %>
+                                       class: "btn btn-xs btn-danger" %>
+    <% end %> 
     <%= link_to "View all recipes", recipes_path, class: "btn btn-xs btn-success" %>
   </div>
 </div>
