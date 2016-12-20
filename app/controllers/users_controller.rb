@@ -30,18 +30,19 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    #respond_to do |format|
     if @user.save
-      #format.html { redirect_to @user, notice: 'Welcome to Concon.' }
-      #format.json { render :show, status: :created, location: @user }
-      flash[:sucess] = "Welcome to Concon"
-      redirect_to recipes_path
+      session[:user_id] = @user.id
+      flash[:sucess] = "Welcome to Concon #{@user.username}"
+      redirect_to user_path(@user)
       else
         render 'new'
-        #format.html { render :new }
-        #format.json { render json: @user.errors, status: :unprocessable_entity }
-    end
+      #respond_to do |format|
+      #format.html { redirect_to @user, notice: 'Welcome to Concon.' }
+      #format.json { render :show, status: :created, location: @user }
+      #format.html { render :new }
+      #format.json { render json: @user.errors, status: :unprocessable_entity }
       #end
+    end
   end
 
   # PATCH/PUT /users/1
