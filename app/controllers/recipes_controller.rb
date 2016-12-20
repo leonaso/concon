@@ -15,6 +15,7 @@ class RecipesController < ApplicationController
   
   def create
     @recipe = Recipe.new(recipe_params)
+    @recipe.user = User.first
     if @recipe.save
       flash[:success] = "The recipe was successfully created"
       redirect_to recipe_path(@recipe)

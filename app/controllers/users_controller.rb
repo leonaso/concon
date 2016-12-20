@@ -21,36 +21,43 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @user = User.find(params[:id])
   end
 
   # POST /users
   # POST /users.json
   def create
     @user = User.new(user_params)
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to @user, notice: 'Welcome to Concon.' }
-        format.json { render :show, status: :created, location: @user }
-        
+    #respond_to do |format|
+    if @user.save
+      #format.html { redirect_to @user, notice: 'Welcome to Concon.' }
+      #format.json { render :show, status: :created, location: @user }
+      flash[:sucess] = "Welcome to Concon"
+      redirect_to recipes_path
       else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+        render 'new'
+        #format.html { render :new }
+        #format.json { render json: @user.errors, status: :unprocessable_entity }
     end
+      #end
   end
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    respond_to do |format|
+    #respond_to do |format|
+    @user = User.find(params[:id])
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'Concon-user was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
+        flash[:success] = "Your account was updated succesfully"
+        redirect_to recipes_path
+        #format.html { redirect_to @user, notice: 'Concon-user was successfully updated.' }
+        #format.json { render :show, status: :ok, location: @user }
       else
-        format.html { render :edit }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        render 'edit'
+        #format.html { render :edit }
+        #format.json { render json: @user.errors, status: :unprocessable_entity }
       end
-    end
+        #end
   end
 
   # DELETE /users/1
