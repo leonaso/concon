@@ -1,12 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/
 # FixtureSet.html
 
-one:
-  first_name: MyFirstName
-  last_name:  MyLastName
-  email: MyEmail@concon.com
+#one:
+#  name: sports
+#  first_name: MyFirstName
+#  last_name:  MyLastName
+#  email: MyEmail@concon.com
 
-two:
-  first_name: MyFirstName
-  last_name:  MyLastName
-  email: MyEmail@concon.com
+#two:
+#  first_name: MyFirstName
+#  last_name:  MyLastName
+#  email: MyEmail@concon.com

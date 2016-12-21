@@ -44,9 +44,9 @@ group :development, :test do
 
   gem 'rspec-rails'
 # The following optional lines are part of the advanced setup.
-  gem 'guard-rspec'
+#  gem 'guard-rspec'
 #  gem 'spork-rails'
-  gem 'guard-spork'
+#  gem 'guard-spork'
   gem 'childprocess'
 # Use debugger
 #  gem 'debugger'
@@ -59,7 +59,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'cucumber-rails',  :require => false
   gem 'database_cleaner'
-
+  gem 'rails-controller-testing'
   # Uncomment this line on OS X.
   # gem 'growl', '1.0.3'
 
