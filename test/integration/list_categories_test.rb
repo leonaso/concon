@@ -3,8 +3,8 @@ require 'test_helper'
 class ListCategoriesTest < ActionDispatch::IntegrationTest
   
   def setup
-    @category = Category.create(name: "Carnes")
-    @category2 = Category.create(name: "Vegetales")
+    @category = Category.create(name: "test1")
+    @category2 = Category.create(name: "test2")
   end
   
   test "should show categories listing" do
