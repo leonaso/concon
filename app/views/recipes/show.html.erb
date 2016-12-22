@@ -1,6 +1,6 @@
 <h2 align="center">Title: <%= @recipe.title %></h2>
 <div class="well col-xs-8 col-xs-offset-2">
- <% if @recipe.user %>
+  <% if @recipe.user %>
     <ul class='listing'>
       <div class='row center'>
         <div class='col-md-4 col-md-offset-4'>
@@ -17,10 +17,13 @@
         </div>
       </div>
     </ul>
- <% end %>
+   <% end %>
   <h4 class="center description"><strong>Description:</strong></h4>
   <hr>
   <%= simple_format(@recipe.description) %>
+  <% if @recipe.categories.any? %>
+    <p>Categories: <%= render @recipe.categories %></p>
+  <% end %>
   <div class="article-actions">
     <% if logged_in? && (current_user == @recipe.user || current_user.admin?) %>
       <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class: "btn btn-xs btn-primary" %>

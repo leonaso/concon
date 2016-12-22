@@ -15,6 +15,9 @@
             </small>
           </div>  
         </div>
+        <% if recipe.categories.any? %>
+          <p>Categories: <%=render recipe.categories %> </p>
+        <% end %>
         <% if logged_in? && (current_user == recipe.user || current_user.admin?) %>
           <div class="recipe-actions">
             <%= link_to "Edit this recipe", edit_recipe_path(recipe), class: "btn btn-xs btn-primary" %>

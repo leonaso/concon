@@ -1,0 +1,11 @@
+<h1 align="center"><%= "Category: "+@category.name %></h1>
+<div align='center'>
+  <%= will_paginate @category_recipes %>
+</div>
+<%= render 'recipes/recipe', obj: @category_recipes %>
+
+<p><%= link_to 'Home', root_path %></p>
+
+<div align='center'>
+  <%= will_paginate @category_recipes %>
+</div>
