@@ -1,14 +1,10 @@
 <div class="container">
   <footer class="footer">
     <small>
-      Copyright &copy; <%= link_to 'Home', root_path %>
+      Copyright &copy; <%= link_to 'Home', root_path %> &nbsp;
+      <%= link_to 'Concon Recipes', recipes_path %>  |  
+      <%= link_to 'About', about_path %>  |
+      <%= link_to 'Help', help_path %>
     </small>
-    <nav>
-      <ul>
-        <li><%= link_to "About",   about_path %></li>
-        <li><%= link_to "Contact", '#' %></li>
-        <li><%= link_to "News",    '#' %></li>
-      </ul>
-    </nav>
   </footer>
 </div>

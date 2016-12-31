@@ -11,10 +11,10 @@ $navbar-default-bg: black;
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 15px;
   font-weight: bold;
   &:hover {
-    color: #a1abad;
+    color: #fff;
     /* text-decoration: none; */
   }
 }
@@ -27,7 +27,7 @@ $gray-medium-light: #eaeaea;
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 section {
@@ -44,11 +44,16 @@ textarea {
     margin-bottom: 10px;
     color: #fff;
   }
+  
+  h1 {
+    color: #fff;
+    font-size: 2em;
+  }
 }
 
 .jumbotron {
   background-image: asset-url('Pinchos.jpg');
-  background-size: cover;
+/*  background-size: cover; */
   
 }
 
@@ -59,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -146,3 +151,28 @@ footer {
     }
   }
 }
+
+/* mixins, variables, etc.
+
+$gray-medium-light: #eaeaea;
+
+ */
+
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+
