@@ -9,7 +9,7 @@ RSpec.feature "Creating Recipes" do
     click_button "Create Recipe"
     
     expect(page).to have_content("Recipe has been created")
-    expect(page.current_path).to eq(recipe_path)
+    expect(page.current_path).to eq(recipes_path)
     
   end
 end

@@ -66,7 +66,7 @@ group :test do
   # gem 'growl', '1.0.3'
 
   # Uncomment these lines on Linux.
-  gem 'libnotify'
+  # gem 'libnotify'
 
   # Uncomment these lines on Windows.
   # gem 'rb-notifu', '0.0.4'
