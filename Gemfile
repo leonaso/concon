@@ -7,12 +7,13 @@ ruby '2.3.1'
 gem 'rails', '>= 5.0.0.1'
 gem 'bcrypt', '>= 3.1.7'
 gem 'bootstrap-sass', '>= 3.3.6'
+gem 'autoprefixer-rails'
 gem 'sprockets'
 gem 'bcrypt-ruby'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'faker'
-
+gem 'devise'
 gem 'puma', '>= 3.4.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 5.0.6'
@@ -42,9 +43,10 @@ group :development, :test do
 # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '9.0.0', platform: :mri
 
-  gem 'rspec-rails'
 # The following optional lines are part of the advanced setup.
-#  gem 'guard-rspec'
+  gem 'rspec-rails'
+  gem 'guard-rspec', require: false
+  gem 'spring-commands-rspec'
 #  gem 'spork-rails'
 #  gem 'guard-spork'
   gem 'childprocess'
