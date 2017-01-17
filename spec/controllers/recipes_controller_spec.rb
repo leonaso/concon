@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe RecetasController, type: :controller do
+RSpec.describe RecipesController, type: :controller do
 
   describe "GET #new" do
     it "returns http success" do
